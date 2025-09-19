@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Symfony\DependencyInjection;
+namespace Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Symfony\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -27,10 +27,10 @@ class SuluMessengerFailedQueueExtension extends Extension implements PrependExte
                         ],
                     ],
                     'resources' => [
-                        'tailr_messenger_failed_queue' => [
+                        'phpro_messenger_failed_queue' => [
                             'routes' => [
-                                'list' => 'tailr.messenger_failed_queue_list',
-                                'detail' => 'tailr.messenger_failed_queue_fetch',
+                                'list' => 'phpro.messenger_failed_queue_list',
+                                'detail' => 'phpro.messenger_failed_queue_fetch',
                             ],
                         ],
                     ],

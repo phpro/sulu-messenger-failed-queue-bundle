@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface;
+use Phpro\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\FetchController;
+use Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\FetchController;
-use Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 
 class FetchControllerTest extends TestCase
 {
@@ -34,7 +34,7 @@ class FetchControllerTest extends TestCase
     public function it_is_a_secured_controller(): void
     {
         self::assertInstanceOf(SecuredControllerInterface::class, $this->controller);
-        self::assertSame('tailr_failed_queue', $this->controller->getSecurityContext());
+        self::assertSame('phpro_failed_queue', $this->controller->getSecurityContext());
         self::assertSame('en', $this->controller->getLocale(new Request()));
     }
 

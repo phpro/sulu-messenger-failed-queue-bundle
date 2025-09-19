@@ -12,7 +12,7 @@ export async function retryMessage(
     withRequeue,
 ) {
     await runActionOnServer(
-        Requester.put(symfonyRouting.generate(`tailr.messenger_failed_queue_${withRequeue ? 'requeue' : 'retry'}`), {
+        Requester.put(symfonyRouting.generate(`phpro.messenger_failed_queue_${withRequeue ? 'requeue' : 'retry'}`), {
             identifiers: messageIdentifiers
         })
     );

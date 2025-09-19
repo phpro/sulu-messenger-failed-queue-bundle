@@ -6,20 +6,20 @@ Via the admin panel you are able to check the error/exception details of each fa
 
 ## Demo
 
-https://github.com/tailrdigital/sulu-messenger-failed-queue-bundle/assets/1618158/77cebd91-e62c-42f3-b976-4410bea7b9d2
+https://github.com/phpro/sulu-messenger-failed-queue-bundle/assets/1618158/77cebd91-e62c-42f3-b976-4410bea7b9d2
 
 
 ## Installation
 
 ```sh
-composer require tailrdigital/sulu-messenger-failed-queue-bundle
+composer require phpro/sulu-messenger-failed-queue-bundle
 ```
 
 #### Register the bundle
 Make sure the bundle is activated in `config/bundles.php`:
 
 ```php
-Tailr\SuluMessengerFailedQueueBundle\SuluMessengerFailedQueueBundle::class => ['all' => true]
+Phpro\SuluMessengerFailedQueueBundle\SuluMessengerFailedQueueBundle::class => ['all' => true]
 ```
 
 #### Register new admin routes
@@ -29,7 +29,7 @@ You need to manually register the failed queue admin controller routes in the fi
 ```yaml
 # config/routes_admin.yaml
 
-tailr_failed_queue:
+phpro_failed_queue:
     resource: '@SuluMessengerFailedQueueBundle/Presentation/Controller/Admin'
     type: attribute
     prefix: /admin/api
@@ -42,7 +42,7 @@ Register an additional module in your admin's node dependencies via `assets/admi
 ```json
 {
   "dependencies": {
-    "sulu-messenger-failed-queue-bundle": "file:node_modules/@sulu/vendor/tailrdigital/sulu-messenger-failed-queue-bundle/assets/admin"
+    "sulu-messenger-failed-queue-bundle": "file:node_modules/@sulu/vendor/phpro/sulu-messenger-failed-queue-bundle/assets/admin"
   }  
 }
 ```

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Model;
+namespace Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Model;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageCollection;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
+use Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageCollection;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
-use Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 
 class FailedMessageListTest extends TestCase
 {

@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace App\Tests\Unit\Messenger\FailedQueue;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessages;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepositoryInterface;
+use Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Symfony\Component\Messenger\Exception\MessageDecodingFailedException;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessages;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepositoryInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 
 class FetchMessagesTest extends TestCase
 {

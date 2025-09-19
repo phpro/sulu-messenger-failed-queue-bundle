@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle;
+namespace Phpro\SuluMessengerFailedQueueBundle;
 
+use Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Symfony\DependencyInjection\SuluMessengerFailedQueueExtension;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Symfony\DependencyInjection\SuluMessengerFailedQueueExtension;
 
 class SuluMessengerFailedQueueBundle extends Bundle
 {

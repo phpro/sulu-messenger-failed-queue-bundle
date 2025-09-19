@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Tests\Functional\Infrastructure\Doctrine\Repository;
+namespace Phpro\SuluMessengerFailedQueueBundle\Tests\Functional\Infrastructure\Doctrine\Repository;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\ORMSetup;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Doctrine\Repository\DoctrineFailedQueueRepository;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Messenger\Bridge\Doctrine\Transport\Connection as DoctrineTransportConnection;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Doctrine\Repository\DoctrineFailedQueueRepository;
 
 use function Psl\Result\wrap;
 

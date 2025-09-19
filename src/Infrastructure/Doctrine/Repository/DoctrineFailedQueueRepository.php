@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Doctrine\Repository;
+namespace Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Doctrine\Repository;
 
 use Doctrine\DBAL\Query;
 use Doctrine\ORM\EntityManagerInterface;
 
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepositoryInterface;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepositoryInterface;
 
 use function Psl\Str\Byte\lowercase;
 use function Psl\Str\is_empty;

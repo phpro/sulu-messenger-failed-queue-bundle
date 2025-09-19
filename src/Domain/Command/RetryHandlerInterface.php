@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Domain\Command;
+namespace Phpro\SuluMessengerFailedQueueBundle\Domain\Command;
 
 interface RetryHandlerInterface
 {

@@ -1,5 +1,5 @@
 services:
-  Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Sulu\Admin\MessengerFailedQueueAdmin:
+  Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Sulu\Admin\MessengerFailedQueueAdmin:
     arguments:
       - '@sulu_admin.view_builder_factory'
       - '@sulu_security.security_checker'

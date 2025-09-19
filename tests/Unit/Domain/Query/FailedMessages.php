@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query;
+namespace Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query;
 
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessage;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessage;
 
 class FailedMessages
 {

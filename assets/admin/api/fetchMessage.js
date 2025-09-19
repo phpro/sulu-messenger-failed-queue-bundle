@@ -11,7 +11,7 @@ export async function fetchMessage(
     messageId,
 ) {
     const response = await runActionOnServer(
-        Requester.get(symfonyRouting.generate('tailr.messenger_failed_queue_fetch', {id: messageId}))
+        Requester.get(symfonyRouting.generate('phpro.messenger_failed_queue_fetch', {id: messageId}))
     );
 
     return tryParseFailedMessage(response);

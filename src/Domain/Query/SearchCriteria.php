@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Domain\Query;
+namespace Phpro\SuluMessengerFailedQueueBundle\Domain\Query;
 
 final class SearchCriteria
 {
