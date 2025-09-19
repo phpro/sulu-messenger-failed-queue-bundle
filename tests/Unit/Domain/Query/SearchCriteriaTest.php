@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace App\Tests\Unit\Messenger\FailedQueue;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
 
 class SearchCriteriaTest extends TestCase
 {

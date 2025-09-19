@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Domain\Query;
+namespace Phpro\SuluMessengerFailedQueueBundle\Domain\Query;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageCollection;
+
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepositoryInterface;
 use Symfony\Component\Messenger\Exception\MessageDecodingFailedException;
-
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageCollection;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepositoryInterface;
 
 final class FetchMessages implements FetchMessagesInterface
 {

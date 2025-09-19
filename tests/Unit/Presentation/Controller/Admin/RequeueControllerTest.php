@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Command\RequeueHandlerInterface;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Command\RetryHandlerInterface;
+use Phpro\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\RequeueController;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Command\RequeueHandlerInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Command\RetryHandlerInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\RequeueController;
 
 class RequeueControllerTest extends TestCase
 {
@@ -29,7 +29,7 @@ class RequeueControllerTest extends TestCase
     public function it_is_a_secured_controller(): void
     {
         self::assertInstanceOf(SecuredControllerInterface::class, $this->controller);
-        self::assertSame('tailr_failed_queue', $this->controller->getSecurityContext());
+        self::assertSame('phpro_failed_queue', $this->controller->getSecurityContext());
         self::assertSame('en', $this->controller->getLocale(new Request()));
     }
 

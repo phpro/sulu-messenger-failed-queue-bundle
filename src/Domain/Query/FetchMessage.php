@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Domain\Query;
+namespace Phpro\SuluMessengerFailedQueueBundle\Domain\Query;
+
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessage;
 
 use Symfony\Component\Messenger\Envelope;
 
 use Symfony\Component\Messenger\Stamp\BusNameStamp;
-
 use Symfony\Component\Messenger\Stamp\ErrorDetailsStamp;
-use Symfony\Component\Messenger\Stamp\RedeliveryStamp;
 
+use Symfony\Component\Messenger\Stamp\RedeliveryStamp;
 use Symfony\Component\Messenger\Stamp\SentToFailureTransportStamp;
 use Symfony\Component\Messenger\Stamp\TransportMessageIdStamp;
 use Symfony\Component\Messenger\Transport\Receiver\ListableReceiverInterface;
 use Symfony\Component\Serializer\SerializerInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessage;
 
 use function Psl\Type\instance_of;
 

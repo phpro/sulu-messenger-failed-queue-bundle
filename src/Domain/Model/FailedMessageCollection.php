@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Domain\Model;
+namespace Phpro\SuluMessengerFailedQueueBundle\Domain\Model;
 
 use IteratorAggregate;
 

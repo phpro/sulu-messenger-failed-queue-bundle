@@ -1,20 +1,20 @@
 {
-    "name": "tailrdigital/sulu-messenger-failed-queue-bundle",
+    "name": "phpro/sulu-messenger-failed-queue-bundle",
     "keywords": ["sulu", "messenger", "failed-queue"],
     "type": "symfony-bundle",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Tailr\\SuluMessengerFailedQueueBundle\\": "src/"
+            "Phpro\\SuluMessengerFailedQueueBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tailr\\SuluMessengerFailedQueueBundle\\Tests\\": "tests/"
+            "Phpro\\SuluMessengerFailedQueueBundle\\Tests\\": "tests/"
         }
     },
     "require": {
-        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0",
         "azjezz/psl": "^2.6 || ^3.0",
         "doctrine/dbal": "^3.0",
         "doctrine/orm": "^2.14",

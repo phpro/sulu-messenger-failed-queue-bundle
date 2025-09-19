@@ -1,14 +1,14 @@
 services:
-  Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessage:
+  Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessage:
     arguments:
       - '@sulu_messenger_failed_queue.transport'
       - '@serializer'
 
-  Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface: '@Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessage'
+  Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface: '@Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessage'
 
-  Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessages:
+  Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessages:
     arguments:
-      - '@Tailr\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepository'
-      - '@Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface'
+      - '@Phpro\SuluMessengerFailedQueueBundle\Domain\Repository\FailedQueueRepository'
+      - '@Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessageInterface'
 
-  Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessagesInterface: '@Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessages'
+  Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessagesInterface: '@Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessages'

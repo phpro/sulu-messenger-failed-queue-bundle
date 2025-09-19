@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin;
+namespace Phpro\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin;
 
+use Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Sulu\Admin\MessengerFailedQueueAdmin;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Sulu\Admin\MessengerFailedQueueAdmin;
 
 abstract class AbstractSecuredMessengerFailedQueueController implements SecuredControllerInterface
 {

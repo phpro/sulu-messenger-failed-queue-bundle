@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Sulu\Admin;
+namespace Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Sulu\Admin;
 
+use Phpro\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\ListController;
 use Sulu\Bundle\AdminBundle\Admin\Admin;
 use Sulu\Bundle\AdminBundle\Admin\Navigation\NavigationItem;
 use Sulu\Bundle\AdminBundle\Admin\Navigation\NavigationItemCollection;
@@ -13,11 +14,10 @@ use Sulu\Bundle\AdminBundle\Admin\View\ViewBuilderFactoryInterface;
 use Sulu\Bundle\AdminBundle\Admin\View\ViewCollection;
 use Sulu\Component\Security\Authorization\PermissionTypes;
 use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\ListController;
 
 class MessengerFailedQueueAdmin extends Admin
 {
-    final public const SECURITY_CONTEXT = 'tailr_failed_queue';
+    final public const SECURITY_CONTEXT = 'phpro_failed_queue';
     final public const LIST_KEY = 'failed_queue_list';
     private const LIST_VIEW = 'view_failed_queue_list';
 

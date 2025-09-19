@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Model;
+namespace Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Model;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessage;
 use PHPUnit\Framework\TestCase;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessage;
 
 class FailedMessageTest extends TestCase
 {

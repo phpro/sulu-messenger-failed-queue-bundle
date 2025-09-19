@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Command;
+namespace Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Command;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Command\RetryHandler;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -14,7 +15,6 @@ use Symfony\Component\EventDispatcher\EventDispatcherInterface;
 use Symfony\Component\Messenger\Envelope;
 use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Transport\Receiver\ListableReceiverInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Command\RetryHandler;
 
 class RetryHandlerTest extends TestCase
 {

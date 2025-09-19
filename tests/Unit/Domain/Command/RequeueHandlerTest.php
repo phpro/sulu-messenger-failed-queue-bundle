@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Command;
+namespace Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Command;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Command\RequeueHandler;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -15,7 +16,6 @@ use Symfony\Component\Messenger\RoutableMessageBus;
 use Symfony\Component\Messenger\Stamp\BusNameStamp;
 use Symfony\Component\Messenger\Stamp\ErrorDetailsStamp;
 use Symfony\Component\Messenger\Transport\Receiver\ListableReceiverInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Command\RequeueHandler;
 
 class RequeueHandlerTest extends TestCase
 {

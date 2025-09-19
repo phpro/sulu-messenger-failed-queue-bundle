@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Domain\Query;
+namespace Phpro\SuluMessengerFailedQueueBundle\Domain\Query;
 
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
 
 interface FetchMessagesInterface
 {

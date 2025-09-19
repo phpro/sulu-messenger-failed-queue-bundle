@@ -2,6 +2,12 @@
 
 declare(strict_types=1);
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageCollection;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessagesInterface;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\ListController;
+use Phpro\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
@@ -10,12 +16,6 @@ use Sulu\Component\Rest\ListBuilder\ListRestHelperInterface;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Serializer\SerializerInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageCollection;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Model\FailedMessageList;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessagesInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
-use Tailr\SuluMessengerFailedQueueBundle\Presentation\Controller\Admin\ListController;
-use Tailr\SuluMessengerFailedQueueBundle\Tests\Unit\Domain\Query\FailedMessages;
 
 class ListControllerTest extends TestCase
 {
@@ -43,7 +43,7 @@ class ListControllerTest extends TestCase
     public function it_is_a_secured_controller(): void
     {
         self::assertInstanceOf(SecuredControllerInterface::class, $this->controller);
-        self::assertSame('tailr_failed_queue', $this->controller->getSecurityContext());
+        self::assertSame('phpro_failed_queue', $this->controller->getSecurityContext());
         self::assertSame('en', $this->controller->getLocale(new Request()));
     }
 
@@ -72,7 +72,7 @@ class ListControllerTest extends TestCase
         ))->shouldBeCalledOnce();
 
         $this->serializer->serialize(Argument::type('array'), 'json')
-            ->willReturn($serializedData = '{"_embedded": {"tailr_messenger_failed_queue": []}, "limit": 10, "total": 2, "page": 1, "pages": 1}');
+            ->willReturn($serializedData = '{"_embedded": {"phpro_messenger_failed_queue": []}, "limit": 10, "total": 2, "page": 1, "pages": 1}');
 
         $response = ($this->controller)();
 
@@ -104,7 +104,7 @@ class ListControllerTest extends TestCase
         ))->shouldBeCalledOnce();
 
         $this->serializer->serialize(Argument::type('array'), 'json')
-            ->willReturn($serializedData = '{"_embedded": {"tailr_messenger_failed_queue": []}, "limit": 10, "total": 1, "page": 1, "pages": 1}');
+            ->willReturn($serializedData = '{"_embedded": {"phpro_messenger_failed_queue": []}, "limit": 10, "total": 1, "page": 1, "pages": 1}');
 
         $response = ($this->controller)();
 

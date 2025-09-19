@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Infrastructure\Symfony\DependencyInjection;
+namespace Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Symfony\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

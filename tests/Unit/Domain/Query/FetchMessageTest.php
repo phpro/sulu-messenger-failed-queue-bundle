@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Tests\Unit\Messenger\FailedQueue;
 
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessage;
 use PHPUnit\Framework\TestCase;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
@@ -16,7 +17,6 @@ use Symfony\Component\Messenger\Stamp\SentToFailureTransportStamp;
 use Symfony\Component\Messenger\Stamp\TransportMessageIdStamp;
 use Symfony\Component\Messenger\Transport\Receiver\ListableReceiverInterface;
 use Symfony\Component\Serializer\SerializerInterface;
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\FetchMessage;
 
 class FetchMessageTest extends TestCase
 {

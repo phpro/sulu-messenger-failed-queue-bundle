@@ -2,7 +2,7 @@
   "name": "sulu-messenger-failed-queue-bundle",
   "description": " A failed queue screen in Sulu admin for Symfony messenger ",
   "license": "MIT",
-  "repository": "git@github.com:tailrdigital/sulu-messenger-failed-queue-bundle.git",
+  "repository": "git@github.com:phpro/sulu-messenger-failed-queue-bundle.git",
   "dependencies": {
     "zod": "^3.22.4"
   },

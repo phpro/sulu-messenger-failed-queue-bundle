@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Tailr\SuluMessengerFailedQueueBundle\Domain\Repository;
+namespace Phpro\SuluMessengerFailedQueueBundle\Domain\Repository;
 
-use Tailr\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
+use Phpro\SuluMessengerFailedQueueBundle\Domain\Query\SearchCriteria;
 
 interface FailedQueueRepositoryInterface
 {
