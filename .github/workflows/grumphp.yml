@@ -15,7 +15,7 @@ jobs:
         strategy:
             matrix:
                 operating-system: [ubuntu-latest]
-                php-versions: ['8.1', '8.2', '8.3']
+                php-versions: ['8.2', '8.3', '8.4', '8.5']
                 composer-options: ['', '--prefer-lowest']
                 composer-versions: ['composer:v2']
             fail-fast: false
@@ -38,13 +38,15 @@ jobs:
               id: composercache
               run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
             - name: Cache dependencies
-              uses: actions/cache@v3
+              uses: actions/cache@v5
               with:
                   path: ${{ steps.composercache.outputs.dir }}
                   key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
                   restore-keys: ${{ runner.os }}-composer-
             - name: Install dependencies
               run: composer update --prefer-dist --no-progress --no-suggest ${{ matrix.composer-options }}
+              env:
+                COMPOSER_IGNORE_PLATFORM_REQ: php+
             - name: Start containers
               run: docker compose -f "docker-compose.yml" up -d --build --wait
             - name: Set git variables
@@ -54,6 +56,10 @@ jobs:
                 git config --global protocol.file.allow always
             - name: Run the tests
               run: php vendor/bin/grumphp run --no-interaction
+              continue-on-error: ${{ matrix.php-versions == '8.5' && matrix.composer-options == '--prefer-lowest' }} # Psalm failures on lowest dev-deps
+              env:
+                BOX_REQUIREMENT_CHECKER: 0
+                PHP_CS_FIXER_IGNORE_ENV: 1
             - name: Stop containers
               if: always()
               run: docker compose -f "docker-compose.yml" down

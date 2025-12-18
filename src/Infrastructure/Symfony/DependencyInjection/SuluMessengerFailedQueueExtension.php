@@ -13,7 +13,7 @@ use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 use function Psl\Type\non_empty_string;
 use function Psl\Type\shape;
 
-class SuluMessengerFailedQueueExtension extends Extension implements PrependExtensionInterface
+final class SuluMessengerFailedQueueExtension extends Extension implements PrependExtensionInterface
 {
     public function prepend(ContainerBuilder $container): void
     {
