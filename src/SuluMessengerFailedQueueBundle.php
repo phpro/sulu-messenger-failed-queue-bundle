@@ -8,7 +8,7 @@ use Phpro\SuluMessengerFailedQueueBundle\Infrastructure\Symfony\DependencyInject
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SuluMessengerFailedQueueBundle extends Bundle
+final class SuluMessengerFailedQueueBundle extends Bundle
 {
     public function getContainerExtension(): ExtensionInterface
     {

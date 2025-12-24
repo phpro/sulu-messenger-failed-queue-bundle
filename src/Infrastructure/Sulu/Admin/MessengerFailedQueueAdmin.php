@@ -15,7 +15,7 @@ use Sulu\Bundle\AdminBundle\Admin\View\ViewCollection;
 use Sulu\Component\Security\Authorization\PermissionTypes;
 use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 
-class MessengerFailedQueueAdmin extends Admin
+final class MessengerFailedQueueAdmin extends Admin
 {
     final public const SECURITY_CONTEXT = 'phpro_failed_queue';
     final public const LIST_KEY = 'failed_queue_list';

@@ -8,7 +8,7 @@ use Phpro\SuluMessengerFailedQueueBundle\Domain\Command\DeleteHandlerInterface;
 use Sulu\Component\Security\SecuredControllerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Routing\Attribute\Route;
 
 #[Route(path: '/messenger-failed-queue/{id}', name: 'phpro.messenger_failed_queue_delete', methods: ['DELETE'])]
 final class DeleteController extends AbstractSecuredMessengerFailedQueueController implements SecuredControllerInterface
