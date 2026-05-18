@@ -19,7 +19,7 @@ use function Psl\Type\int;
 #[Route(path: '/messenger-failed-queue', name: 'phpro.messenger_failed_queue_list', options: ['expose' => true], methods: ['GET'])]
 final class ListController extends AbstractSecuredMessengerFailedQueueController implements SecuredControllerInterface
 {
-    public const RESOURCE_KEY = 'phpro_messenger_failed_queue';
+    public const string RESOURCE_KEY = 'phpro_messenger_failed_queue';
 
     public function __construct(
         private readonly SerializerInterface $serializer,
@@ -45,7 +45,7 @@ final class ListController extends AbstractSecuredMessengerFailedQueueController
         $listRepresentation = new PaginatedRepresentation(
             $failedMessageList->failedMessageCollection(),
             self::RESOURCE_KEY,
-            (int) $this->listRestHelper->getPage(),
+            $this->listRestHelper->getPage(),
             $limit,
             $failedMessageList->totalCount()
         );
