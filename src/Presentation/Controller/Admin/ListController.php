@@ -45,7 +45,7 @@ final class ListController extends AbstractSecuredMessengerFailedQueueController
         $listRepresentation = new PaginatedRepresentation(
             $failedMessageList->failedMessageCollection(),
             self::RESOURCE_KEY,
-            $this->listRestHelper->getPage(),
+            int()->coerce($this->listRestHelper->getPage()),
             $limit,
             $failedMessageList->totalCount()
         );
