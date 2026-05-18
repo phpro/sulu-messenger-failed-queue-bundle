@@ -27,6 +27,7 @@ class DoctrineFailedQueueRepositoryTest extends TestCase
         parent::setUp();
 
         $this->connection = DriverManager::getConnection([
+            'driver' => 'pdo_pgsql',
             'url' => $_ENV['DATABASE_URL'],
         ]);
         $this->entityManager = new EntityManager(
