@@ -6,6 +6,7 @@ namespace Phpro\SuluMessengerFailedQueueBundle\Tests\Functional\Infrastructure\D
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
+use Doctrine\DBAL\Tools\DsnParser;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\ORMSetup;
@@ -26,9 +27,10 @@ class DoctrineFailedQueueRepositoryTest extends TestCase
     {
         parent::setUp();
 
-        $this->connection = DriverManager::getConnection([
-            'url' => $_ENV['DATABASE_URL'],
-        ]);
+        $dsnParser = new DsnParser(['postgresql' => 'pdo_pgsql']);
+        $this->connection = DriverManager::getConnection(
+            $dsnParser->parse($_ENV['DATABASE_URL'])
+        );
         $this->entityManager = new EntityManager(
             $this->connection,
             ORMSetup::createAttributeMetadataConfiguration([], true)

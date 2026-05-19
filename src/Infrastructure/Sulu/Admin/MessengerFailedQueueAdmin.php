@@ -17,9 +17,9 @@ use Sulu\Component\Security\Authorization\SecurityCheckerInterface;
 
 final class MessengerFailedQueueAdmin extends Admin
 {
-    final public const SECURITY_CONTEXT = 'phpro_failed_queue';
-    final public const LIST_KEY = 'failed_queue_list';
-    private const LIST_VIEW = 'view_failed_queue_list';
+    final public const string SECURITY_CONTEXT = 'phpro_failed_queue';
+    final public const string LIST_KEY = 'failed_queue_list';
+    private const string LIST_VIEW = 'view_failed_queue_list';
 
     public function __construct(
         private readonly ViewBuilderFactoryInterface $viewBuilderFactory,
